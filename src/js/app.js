@@ -50,7 +50,7 @@ button.addEventListener('click', (event) => {
   userName = input.value.trim();
   if (ws.readyState === WebSocket.OPEN) ws.send(JSON.stringify({ userName }));
   else {
-    ws = new WebSocket('wss://chat-dz.herokuapp.com/');
+    ws = new WebSocket('wss://chat-bac.herokuapp.com/');
     setTimeout(() => ws.send(JSON.stringify({ userName })), 1000);
   }
   document.body.style.cursor = 'wait';
